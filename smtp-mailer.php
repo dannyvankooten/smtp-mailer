@@ -41,7 +41,7 @@ class Plugin {
 
 		// make sure all configuration constants are given
 		foreach( $this->constants as $constant ) {
-			if( ! defined( $constant ) && '' !== constant( $constant ) ) {
+			if( ! defined( $constant ) || '' === constant( $constant ) ) {
 				return;
 			}
 		}
