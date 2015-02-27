@@ -1,0 +1,9 @@
+language: php
+matrix:
+  include:
+    - php: 5.4
+      env: PHPLINT=1
+    - php: 5.5
+    - php: hhvm
+script:
+  - phpunit ./tests --verbose --colors
