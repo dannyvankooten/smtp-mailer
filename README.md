@@ -1,6 +1,6 @@
 # WP SMTP Mailer
 
-This plugin will configure `wp_mail` to use PHPMailer with SMTP.
+This plugin will configure the default WordPress email function (`wp_mail`) to use PHPMailer with SMTP.
 
 [![Build Status](https://api.travis-ci.org/dannyvankooten/wp-smtp-mailer.png?branch=master)](https://travis-ci.org/dannyvankooten/wp-smtp-mailer)
 [![Stable Version](https://poser.pugx.org/dannyvankooten/wp-smtp-mailer/v/stable.svg)](https://packagist.org/packages/dannyvankooten/wp-smtp-mailer)
@@ -11,7 +11,7 @@ This plugin will configure `wp_mail` to use PHPMailer with SMTP.
 Usage
 =========
 
-Define the following constants in your `/wp-config.php` file.
+Define all of the following constants in your `/wp-config.php` file. If either one of these constants is not defined, the plugin won't configure PHPMailer to use SMTP.
 
 ```php
 define( 'SMTP_HOST', 'smtp.gmail.com' );
@@ -22,5 +22,4 @@ define( 'SMTP_PASSWORD', 'your password' );
 
 That's all. 
 
-PS. if either one of the above constants is not defined, the plugin will not modify the `PHPMailer` object. This can be useful if you only want to 
-use SMTP in your production environments, while using something like MailCatcher in your development or staging environment.
+PS. I recommend using something like [MailCatcher](http://mailcatcher.me/) as the SMTP server in your development environments.
