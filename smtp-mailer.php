@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: SMTP Mailer
-Description: This plugin will use SMTP to send your email.
+Description: This plugin will configure wp_mail to use SMTP for sending your email.
 Author: Danny van Kooten
 Version: 1.0
 Author URI: https://dannyvankooten.com/
 */
 
-namespace SMTP;
+namespace SMTP_Mailer;
 
 if( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -56,4 +56,5 @@ class Plugin {
 	}
 
 }
+
 new Plugin;

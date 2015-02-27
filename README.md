@@ -8,7 +8,6 @@ Usage
 Define the following constants in your `/wp-config.php` file.
 
 ```php
-
 define( 'SMTP_HOST', 'smtp.gmail.com' );
 define( 'SMTP_PORT', 465 );
 define( 'SMTP_USER', 'your email' );
