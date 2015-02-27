@@ -12,7 +12,7 @@ before_script:
 script:
 - phpunit ./tests --verbose --colors --coverage-clover build/logs/clover.xml
 after_script:
-- php composer/bin/test-reporter
+- ./vendor/bin/test-reporter
 env:
   global:
     secure: vd64IGvMoH7Sgo8BJEn7e69tq/uBbsKbKczXiMl3GXIheTWXg5lodAmUD62jIiHo3hhRJm7nfLptjAvQr0/XwhsutGHoHP6QwWqdRx6rJOjEPHFwAzxP9KWxbOiqTI4W9u9MA5nB/se9NHQfDjKCoS+8tE/wiu3X3M6ZNx3oROQ=
