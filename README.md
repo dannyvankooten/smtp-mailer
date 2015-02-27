@@ -2,6 +2,12 @@
 
 This plugin will configure `wp_mail` to use PHPMailer with SMTP.
 
+[![Build Status](https://api.travis-ci.org/dannyvankooten/wp-smtp-mailer.png?branch=master)](https://travis-ci.org/dannyvankooten/wp-smtp-mailer)
+[![Stable Version](https://poser.pugx.org/dannyvankooten/wp-smtp-mailer/v/stable.svg)](https://packagist.org/packages/dannyvankooten/wp-smtp-mailer)
+[![License](https://poser.pugx.org/dannyvankooten/wp-smtp-mailer/license.svg)](https://packagist.org/packages/dannyvankooten/wp-smtp-mailer)
+[![Code Climate](https://codeclimate.com/github/dannyvankooten/wp-smtp-mailer/badges/gpa.svg)](https://codeclimate.com/github/dannyvankooten/wp-smtp-mailer)
+[![Test Coverage](https://codeclimate.com/github/dannyvankooten/wp-smtp-mailer/badges/coverage.svg)](https://codeclimate.com/github/dannyvankooten/wp-smtp-mailer)
+
 Usage
 =========
 
