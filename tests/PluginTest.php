@@ -18,7 +18,7 @@ class PluginTest extends PHPUnit_Framework_TestCase {
 
 	/**
 	 * Test if the action is added correctly.
-	 * @covers Plugin::__construct
+	 * @covers SMTP_Mailer\Plugin::__construct
 	 */
 	public function test_action_is_added() {
 		$instance = new Plugin;
@@ -26,7 +26,7 @@ class PluginTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @covers Plugin::setup_phpmailer
+	 * @covers SMTP_Mailer\Plugin::setup_phpmailer
 	 */
 	public function test_setup_phpmailer() {
 		$phpmailer = new StdClass;

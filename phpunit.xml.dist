@@ -1,0 +1,17 @@
+<phpunit
+	colors="true"
+	verbose="true">
+	<testsuites>
+		<testsuite name="wp-smtp-mailer">
+			<directory>./tests/</directory>
+		</testsuite>
+	</testsuites>
+	<filter>
+		<blacklist>
+			<directory>./vendor/</directory>
+		</blacklist>
+	</filter>
+	<logging>
+		<log type="coverage-clover" target="build/logs/clover.xml"/>
+	</logging>
+</phpunit>

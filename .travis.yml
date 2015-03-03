@@ -10,7 +10,7 @@ before_script:
 - git config --global user.email "travis-ci@codeclimate.com"
 - git config --global user.name "Travis CI"
 script:
-- phpunit ./tests --verbose --colors --coverage-clover build/logs/clover.xml
+- phpunit
 after_script:
 - ./vendor/bin/test-reporter
 env:
