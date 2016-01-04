@@ -11,6 +11,9 @@ function add_action( $hook, $callback, $priority = 10, $arguments = 2 ) {
 	$GLOBALS['actions'][$hook] = $callback;
 }
 
+function add_filter( $hook, $callback, $priority = 10, $arguments = 2 ) {}
+
+
 // Load plugin class
 require __DIR__ .'/../smtp-mailer.php';
 
