@@ -60,19 +60,8 @@ class Plugin {
 
 new Plugin;
 
-// Disable update checks since WordPress.org has a plugin called "smtp-mailer".
-add_filter( 'http_request_args', function( $r, $url ) {
-
-	// Only act on update check requests
-	if ( strpos( $url, '://api.wordpress.org/plugins/update-check' ) === false ) {
-		return $r;
-	}
-
-	// Remove this plugin from request body
-	$plugins = unserialize( $r['body']['plugins'] );
-	unset( $plugins->plugins[ plugin_basename( __FILE__ ) ] );
-	unset( $plugins->active[ array_search( plugin_basename( __FILE__ ), $plugins->active ) ] );
-	$r['body']['plugins'] = serialize( $plugins );
-	
-	return $r;
-}, 5, 2 );
+// remove plugin from update check response
+add_filter( 'site_transient_update_plugins', function( $value ) {
+	unset( $value->response[ plugin_basename( __FILE__ ) ] );
+	return $value;
+} );
