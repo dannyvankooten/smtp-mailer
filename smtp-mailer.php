@@ -5,6 +5,7 @@ Description: This plugin will configure wp_mail to use SMTP for sending your ema
 Author: Danny van Kooten
 Version: 1.0
 Author URI: https://dannyvankooten.com/
+Private: True
 */
 
 namespace SMTP_Mailer;
@@ -58,3 +59,20 @@ class Plugin {
 }
 
 new Plugin;
+
+// Disable update checks since WordPress.org has a plugin called "smtp-mailer".
+add_filter( 'http_request_args', function( $r, $url ) {
+
+	// Only act on update check requests
+	if ( strpos( $url, '://api.wordpress.org/plugins/update-check' ) === false ) {
+		return $r;
+	}
+
+	// Remove this plugin from request body
+	$plugins = unserialize( $r['body']['plugins'] );
+	unset( $plugins->plugins[ plugin_basename( __FILE__ ) ] );
+	unset( $plugins->active[ array_search( plugin_basename( __FILE__ ), $plugins->active ) ] );
+	$r['body']['plugins'] = serialize( $plugins );
+	
+	return $r;
+}, 5, 2 );
