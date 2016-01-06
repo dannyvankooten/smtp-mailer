@@ -62,6 +62,11 @@ new Plugin;
 
 // remove plugin from update check response
 add_filter( 'site_transient_update_plugins', function( $value ) {
-	unset( $value->response[ plugin_basename( __FILE__ ) ] );
+
+	if( is_object( $value ) && isset( $value->response ) ) {
+		$plugin_slug = plugin_basename( __FILE__ );
+		unset( $value->response[ $plugin_slug ] );
+	}
+
 	return $value;
 } );
