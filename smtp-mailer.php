@@ -3,7 +3,7 @@
 Plugin Name: SMTP Mailer
 Description: This plugin will configure wp_mail to use SMTP for sending your email.
 Author: Danny van Kooten
-Version: 1.0
+Version: 1.1
 Author URI: https://dannyvankooten.com/
 Private: True
 */
