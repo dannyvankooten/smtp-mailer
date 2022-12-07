@@ -1,3 +1,7 @@
+This repository moved to https://git.sr.ht/~dvko/wp-smtp-mailer on 2022-12-07 :warning:
+
+---
+
 # WP SMTP Mailer
 
 This plugin will configure the default WordPress email function (`wp_mail`) to use PHPMailer with SMTP.
